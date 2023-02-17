@@ -14,20 +14,20 @@ const input = () => inputString[currentLine++];
 
 const lowerBound = (arr, target) => {
   let l = 0;
-  let r = arr.length - 1;
+  let r = arr.length;
   let m;
 
   while (l < r) {
     m = Math.floor((l + r) / 2);
 
-    if (arr[m] >= target) {
-      r = m;
-    } else {
+    if (arr[m] < target) {
       l = m + 1;
+    } else {
+      r = m;
     }
   }
 
-  return r + 1;
+  return r;
 };
 
 const main = () => {
@@ -59,13 +59,13 @@ const main = () => {
       const index = lowerBound(ps, target) - 1;
 
       if (ps[index] === target) {
-        range.push({ l: i, r: index - 1 });
+        range.push({ l: i, r: index });
       } else {
-        if (i <= index - 2) {
-          range.push({ l: i, r: index - 2 });
+        if (i <= index - 1) {
+          range.push({ l: i, r: index - 1 });
         }
 
-        remain.push({ index: index - 1, value: target - ps[index - 1] });
+        remain.push({ index: index, value: target - ps[index] });
       }
     }
 
