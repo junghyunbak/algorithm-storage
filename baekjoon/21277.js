@@ -42,26 +42,23 @@ const rotate90deg2d = (A) => {
   return newA;
 };
 
-const chk = (A, B, y1, x1, y2, x2, n, m, n1, n2, m1, m2) => {
-  const AB = Array.from(Array(n + n2), () => Array(m + m2).fill(0));
-
-  for (let y = 0; y < n1; y++) {
-    for (let x = 0; x < m1; x++) {
-      AB[y1 + y][x1 + x] = A[y][x];
-    }
-  }
-
-  let valid = true;
-
+const chk = (A, B, y1, x1, y2, x2, n1, n2, m1, m2) => {
   for (let y = 0; y < n2; y++) {
     for (let x = 0; x < m2; x++) {
-      if (B[y][x] && AB[y2 + y][x2 + x]) {
-        valid = false;
+      const ay = y2 + y - y1;
+      const ax = x2 + x - x1;
+
+      if (ay < 0 || ay >= n1 || ax < 0 || ax >= m1) {
+        continue;
+      }
+
+      if (B[y][x] && A[ay][ax]) {
+        return false;
       }
     }
   }
 
-  return valid;
+  return true;
 };
 
 const solve = (A, B) => {
@@ -85,7 +82,7 @@ const solve = (A, B) => {
         continue;
       }
 
-      if (chk(A, B, y1, x1, y2, x2, n, m, n1, n2, m1, m2)) {
+      if (chk(A, B, y1, x1, y2, x2, n1, n2, m1, m2)) {
         const height = Math.max(y1 + n1, y2 + n2) - Math.min(y1, y2);
         const width = Math.max(x1 + m1, x2 + m2) - Math.min(x1, x2);
 
