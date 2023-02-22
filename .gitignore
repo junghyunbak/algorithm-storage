@@ -1,4 +1,7 @@
 # node 로컬 테스트를 위한 파일
 index.js
 package.json
+package-lock.json
 node_modules
+1.js
+*.text
