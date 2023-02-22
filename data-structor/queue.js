@@ -1,4 +1,4 @@
-class Node {
+class QueueNode {
   constructor(item) {
     this.item = item;
     this.next = null;
@@ -13,7 +13,7 @@ class Queue {
   }
 
   push(item) {
-    const node = new Node(item);
+    const node = new QueueNode(item);
 
     if (this.empty()) {
       this._front = this._rear = node;
@@ -74,3 +74,6 @@ class Queue {
     return this._rear.item;
   }
 }
+
+global.QueueNode = QueueNode;
+global.Queue = Queue;

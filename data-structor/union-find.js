@@ -40,3 +40,5 @@ class DisjointSet {
     }
   }
 }
+
+global.DisjointSet = DisjointSet;
