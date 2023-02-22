@@ -1,7 +1,10 @@
 # node 로컬 테스트를 위한 파일
-index.js
 package.json
 package-lock.json
 node_modules
+
+# 자주 생겨나는 임시 파일
 1.js
+index.js
+templateBundle.js
 *.text
