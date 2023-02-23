@@ -11,4 +11,8 @@ const input = (() => {
   return () => stdin[line++];
 })();
 
-global.input = input;
+global.S = () => input();
+global.I = () => parseInt(input());
+global.AS = (sep = ' ') => input().split(sep);
+global.AI = (sep = ' ') => input().split(sep).map(Number);
+global.P = console.log;
