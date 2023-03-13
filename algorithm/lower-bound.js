@@ -1,4 +1,4 @@
-const lowerBound = (a, k) => {
+var lowerBound = (a, k) => {
   let l = 0;
   let r = a.length;
   let m;
@@ -15,5 +15,3 @@ const lowerBound = (a, k) => {
 
   return r;
 };
-
-global.lowerBound = lowerBound;

@@ -78,6 +78,3 @@ class PriorityQueue {
     else return null;
   }
 }
-
-global.Heap = Heap;
-global.PriorityQueue = PriorityQueue;

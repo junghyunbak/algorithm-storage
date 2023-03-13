@@ -74,6 +74,3 @@ class Queue {
     return this._rear.item;
   }
 }
-
-global.QueueNode = QueueNode;
-global.Queue = Queue;
