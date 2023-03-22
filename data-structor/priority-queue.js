@@ -56,7 +56,7 @@ class Heap {
   }
 }
 
-class PriorityQueue {
+var PriorityQueue = class PriorityQueue {
   constructor(compare) {
     this.heap = new Heap(compare);
   }
@@ -77,4 +77,4 @@ class PriorityQueue {
     if (!this.empty()) return this.heap.delete();
     else return null;
   }
-}
+};
