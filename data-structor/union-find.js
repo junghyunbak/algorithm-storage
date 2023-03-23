@@ -1,4 +1,4 @@
-class DisjointSet {
+var DisjointSet = class DisjointSet {
   constructor(n) {
     this.parent = Array(n)
       .fill(null)
@@ -39,4 +39,4 @@ class DisjointSet {
       this.rank[v]++;
     }
   }
-}
+};
