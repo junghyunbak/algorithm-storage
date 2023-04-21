@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgit_repo_blog_generator=self.webpackChunkgit_repo_blog_generator||[]).push([[49],{2766:function(e,t,r){r.r(t);var n=r(7294);t.default=function(){return n.createElement("div",null,"About Page 개발중!")}}}]);
+//# sourceMappingURL=component---src-pages-about-tsx-c8387009756c9dfcbc44.js.map
