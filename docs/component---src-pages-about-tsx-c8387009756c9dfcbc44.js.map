@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-about-tsx-c8387009756c9dfcbc44.js","mappings":"2JAMA,UAJA,WACE,OAAOA,EAAAA,cAAA,WAAK,kBACd,C","sources":["webpack://git-repo-blog-generator/./src/pages/about.tsx"],"sourcesContent":["import React from 'react';\n\nfunction About() {\n  return <div>About Page 개발중!</div>;\n}\n\nexport default About;\n"],"names":["React"],"sourceRoot":""}
