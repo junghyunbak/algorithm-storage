@@ -31,31 +31,18 @@ class Queue {
       return -1;
     }
 
-    if (this.size() === 1) {
-      this._size--;
-
-      const tmp = this._front.item;
-
-      this._front = this._rear = null;
-
-      return tmp;
-    }
-
-    this._size--;
-
-    const tmp = this._front.item;
-
+    const item = this._front.item;
     this._front = this._front.next;
-
-    return tmp;
+    this._size--;
+    return item;
   }
 
-  size() {
+  get size() {
     return this._size;
   }
 
   empty() {
-    return !this._size ? 1 : 0;
+    return this.head === null ? 1 : 0;
   }
 
   front() {
