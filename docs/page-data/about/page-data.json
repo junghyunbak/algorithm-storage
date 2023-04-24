@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-about-tsx","path":"/about","result":{"pageContext":{"repoName":"algorithm-storage"}},"staticQueryHashes":[],"slicesMap":{}}
+{"componentChunkName":"component---src-pages-about-tsx","path":"/about","result":{"data":{"file":{"children":[{"html":"<p>기록중인 내용</p>\n<ul>\n<li>JavaScript 자료구조 &#x26; 알고리즘</li>\n<li>JavaScript 알고리즘 문제 풀이</li>\n</ul>"}]}},"pageContext":{"repoName":"algorithm-storage","profileUrl":"https://avatars.githubusercontent.com/u/44913775?v=4"}},"staticQueryHashes":[],"slicesMap":{}}
