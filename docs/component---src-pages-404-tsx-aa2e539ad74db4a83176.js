@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgit_repo_blog_generator=self.webpackChunkgit_repo_blog_generator||[]).push([[218],{2513:function(e,t,n){n.r(t);var r=n(7294);t.default=function(e){return r.createElement("h1",null,"Page Not Found!")}}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-aa2e539ad74db4a83176.js.map
