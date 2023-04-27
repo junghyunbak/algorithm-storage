@@ -9,3 +9,6 @@ node_modules
 index.js
 templateBundle.js
 *.text
+
+# 기타
+grbgen-config.json
