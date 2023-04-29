@@ -56,140 +56,17 @@ data-styled.g12[id="Styles__LayoutMainContentsBox-sc-kjacjx-2"]{content:"djPDNV,
 @media (max-width:767px){.fbxmst{max-width:100%;}}/*!sc*/
 data-styled.g13[id="Styles__CardLayout-sc-mhtbf7-0"]{content:"fbxmst,"}/*!sc*/
 .ckigQX{width:100%;height:100%;background-color:white;box-shadow:0px 4px 4px rgba(0,0,0,0.05);border-radius:0.1875rem;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;overflow:hidden;}/*!sc*/
-.iLHPQU{width:100%;height:100%;background-color:white;box-shadow:0px 4px 4px rgba(0,0,0,0.05);border-radius:0.1875rem;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;overflow-x:auto;}/*!sc*/
-data-styled.g14[id="Styles__CardContentBox-sc-mhtbf7-1"]{content:"ckigQX,iLHPQU,"}/*!sc*/
+data-styled.g14[id="Styles__CardContentBox-sc-mhtbf7-1"]{content:"ckigQX,"}/*!sc*/
 .eKsDvq{width:100%;}/*!sc*/
 data-styled.g16[id="Styles__UtterancesLayout-sc-e00mo-0"]{content:"eKsDvq,"}/*!sc*/
 .iAuETZ{width:100%;--deckgo-highlight-code-white-space:pre;--deckgo-highlight-code-font-family:'Consolas';}/*!sc*/
 data-styled.g17[id="Styles__PostLayout-sc-wk8yld-0"]{content:"iAuETZ,"}/*!sc*/
 .dGnEwQ{width:100%;}/*!sc*/
 data-styled.g18[id="Styles__PostFileContent-sc-wk8yld-1"]{content:"dGnEwQ,"}/*!sc*/
-.bqHFjI{padding:1rem;}/*!sc*/
-.bqHFjI h1,.bqHFjI h2{border-bottom:1px solid #eaeef2;padding:0.75rem 0;margin-bottom:0.75rem;}/*!sc*/
-.bqHFjI h3{padding:0.5rem 0;}/*!sc*/
-.bqHFjI deckgo-highlight-code,.bqHFjI p{margin-bottom:1.5rem;}/*!sc*/
-.bqHFjI ul,.bqHFjI ol{list-style-position:inside;margin-bottom:1.5rem;}/*!sc*/
-.bqHFjI h1 code,.bqHFjI h2 code,.bqHFjI h3 code,.bqHFjI h4 code,.bqHFjI h5 code,.bqHFjI h6 code,.bqHFjI p code,.bqHFjI li code{border-radius:0.2rem;background-color:#F5F5F5;font-size:0.9rem;font-weight:bold;font-family:'GothicA1';padding:0.2rem 0.4rem;color:#EB5757;}/*!sc*/
-.bqHFjI a{color:#0969da;}/*!sc*/
-.bqHFjI blockquote{border-left:0.2rem solid #B2B2B2;background-color:#F5F5F5;padding-left:1rem;}/*!sc*/
-data-styled.g19[id="Styles__PostMarkdownContent-sc-wk8yld-2"]{content:"bqHFjI,"}/*!sc*/
-</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Styles__LayoutRootBox-sc-kjacjx-0 jYTVoq"><div class="Styles__HeaderLayout-sc-gozztf-0 khlEvq"><div class="Styles__SidebarLayout-sc-13j39sg-0 hznFYt"><div class="sidebar-dimmed"></div><div class="sidebar-content"><p>메뉴</p><ul><li><a href="/algorithm-storage/about">About</a></li><li><a href="/algorithm-storage">Home</a></li></ul></div></div><div class="Styles__HeaderSideBox-sc-gozztf-2 bBKVYl"><div class="Styles__MenuButtonLayout-sc-1a4u3b3-0 bALupo"><div></div><div></div><div></div></div></div><p class="Styles__HeaderParagraph-sc-gozztf-1 kHTYBh"></p><div class="Styles__HeaderSideBox-sc-gozztf-2 bBKVYl"></div></div><main class="Styles__LayoutMain-sc-kjacjx-1 iCiqLs"><div class="Styles__LayoutMainContentsBox-sc-kjacjx-2 djPDNV"><div class="Styles__PostLayout-sc-wk8yld-0 iAuETZ"><li class="Styles__CardLayout-sc-mhtbf7-0 fbxmst"><div class="Styles__CardContentBox-sc-mhtbf7-1 ckigQX"><div class="Styles__PostFileContent-sc-wk8yld-1 dGnEwQ"><deckgo-highlight-code language="js" theme="dracula"><code slot="code">// baekjoon input template
-// prettier-ignore
-{ var fs = require(&#x27;fs&#x27;); var filePath = process.platform === &#x27;linux&#x27; ? &#x27;/dev/stdin&#x27; : &#x27;./input&#x27;; var stdin = fs.readFileSync(filePath).toString().trim().split(&#x27;\n&#x27;).map(s =&gt; s.trim()); var input = (() =&gt; { var line = 0; return () =&gt; stdin[line++] })(); var SI = () =&gt; input(); var NI = () =&gt; parseInt(input()); var SAI = (sep = &#x27; &#x27;) =&gt; input().split(sep); var NAI = (sep = &#x27; &#x27;) =&gt; input().split(sep).map(Number); var CA = (n, v = null) =&gt; Array(n).fill(v); var CAA = (n, m, v = null) =&gt; Array.from(Array(n), () =&gt; Array(m).fill(v)); var CAAA = (n, m, h, v = null) =&gt; Array.from(Array(n), () =&gt; Array.from(Array(m), () =&gt; Array(h).fill(v))); var P = console.log; }
-
-// priority queue data structure
-// prettier-ignore
-{ class Heap { constructor(compare = (a, b) =&gt; a &lt; b) { this.heap = [null]; this.compare = compare } insert(item) { this.heap.push(item); let i = this.heap.length - 1; while (i !== 1 &amp;&amp; this.compare(item, this.heap[Math.floor(i / 2)])) { this.heap[i] = this.heap[Math.floor(i / 2)]; i = Math.floor(i / 2) } this.heap[i] = item } delete() { const item = this.heap[1], tmp = this.heap.pop(), len = this.heap.length - 1; let parent = 1, child = 2; while (child &lt;= len) { if (child &lt; len &amp;&amp; this.compare(this.heap[child + 1], this.heap[child])) { child += 1 } if (this.compare(tmp, this.heap[child])) { break } this.heap[parent] = this.heap[child]; parent = child; child *= 2 } if (this.heap.length &gt; 1) { this.heap[parent] = tmp } return item } empty() { return this.heap.length === 1 } } var PriorityQueue = class PriorityQueue { constructor(compare) { this.heap = new Heap(compare) } empty() { return this.heap.empty() } peek() { return this.heap.heap[1] } push(item) { this.heap.insert(item) } pop() { if (!this.empty()) return this.heap.delete(); else return null } }; }
-
-const dy = [-1, 1, 0, 0];
-const dx = [0, 0, 1, -1];
-
-let ans = [];
-
-const coord2num = (y, x, n) =&gt; (y * n) + (x % n);
-
-while (true) {
-  const N = NI();
-
-  if (!N) {
-    break;
-  }
-
-  const cave = [];
-
-  CA(N).forEach(() =&gt; {
-    cave.push(NAI());
-  });
-
-  const adj = CAA((N + 1) * (N + 1), 0);
-
-  for (let y = 0; y &lt; N; y++) {
-    for (let x = 0; x &lt; N; x++) {
-      for (let i = 0; i &lt; 4; i++) {
-        const ny = y + dy[i];
-        const nx = x + dx[i];
-
-        if (ny &lt; 0 || ny &gt;= N + 1 || nx &lt; 0 || nx &gt;= N + 1) {
-          continue;
-        }
-
-        adj[coord2num(y, x, N + 1)].push([cave[y][x], coord2num(ny, nx, N + 1)]);
-      }
-    }
-  }
-
-  const pq = new PriorityQueue((a, b) =&gt; a[0] &lt; b[0]);
-
-  pq.push([0, 0]);
-
-  const dist = CA((N + 1) * (N + 1), Infinity);
-
-  dist[0] = 0;
-
-  while (!pq.empty()) {
-    const [cost, here] = pq.pop();
-
-    if (dist[here] &lt; cost) {
-      continue;
-    }
-
-    for (let i = 0; i &lt; adj[here].length; i++) {
-      let [nextDist, there] = adj[here][i];
-
-      nextDist += cost;
-
-      if (nextDist &lt; dist[there]) {
-        dist[there] = nextDist;
-
-        pq.push([nextDist, there]);
-      }
-    }
-  }
-
-  ans.push(dist[(N + 1) * (N + 1) - 2])
+</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Styles__LayoutRootBox-sc-kjacjx-0 jYTVoq"><div class="Styles__HeaderLayout-sc-gozztf-0 khlEvq"><div class="Styles__SidebarLayout-sc-13j39sg-0 hznFYt"><div class="sidebar-dimmed"></div><div class="sidebar-content"><p>메뉴</p><ul><li><a href="/algorithm-storage/about">About</a></li><li><a href="/algorithm-storage">Home</a></li></ul></div></div><div class="Styles__HeaderSideBox-sc-gozztf-2 bBKVYl"><div class="Styles__MenuButtonLayout-sc-1a4u3b3-0 bALupo"><div></div><div></div><div></div></div></div><p class="Styles__HeaderParagraph-sc-gozztf-1 kHTYBh"></p><div class="Styles__HeaderSideBox-sc-gozztf-2 bBKVYl"></div></div><main class="Styles__LayoutMain-sc-kjacjx-1 iCiqLs"><div class="Styles__LayoutMainContentsBox-sc-kjacjx-2 djPDNV"><div class="Styles__PostLayout-sc-wk8yld-0 iAuETZ"><li class="Styles__CardLayout-sc-mhtbf7-0 fbxmst"><div class="Styles__CardContentBox-sc-mhtbf7-1 ckigQX"><div class="Styles__PostFileContent-sc-wk8yld-1 dGnEwQ"><deckgo-highlight-code language="json" theme="dracula"><code slot="code">{
+  &quot;utterances&quot;: &quot;jeong57281/jeong57281.github.io&quot;
 }
-
-if (!ans.length) {
-  process.exit(0);
-}
-
-P(ans.map((v, i) =&gt; `Problem ${i + 1}: ${v}`).join(&#x27;\n&#x27;));
-</code></deckgo-highlight-code></div></div></li><li class="Styles__CardLayout-sc-mhtbf7-0 fbxmst"><div class="Styles__CardContentBox-sc-mhtbf7-1 iLHPQU"><div class="Styles__PostMarkdownContent-sc-wk8yld-2 bqHFjI"><h2>풀이 방법</h2>
-<p>각 좌표에서 상하좌우 인접한 좌표로 이동할 때, 현재 좌표의 루피를 잃는다고 보면 된다.</p>
-<p>좌표를 정점으로, 이동 시 잃는 루피를 가중치로 하여 인접 배열을 만들고 최단 경로 알고리즘을 돌려주면 풀리는 간단한 문제이다.</p>
-<h2>삽질</h2>
-<p><span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 486px; "
-    >
-      <a
-    class="gatsby-resp-image-link"
-    href="/algorithm-storage/static/5801050c2cff596e9cd0db194e34aa6c/4ee7f/ctrlcv-issue.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-    <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 57.432432432432435%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB10lEQVR42pWOzW7TQBSF+yRJo6oV/hn/xSYBJHgP3oIdbEBAEkRIeAVWPAXwBrBhiahaEtKA0qRObCe2Y/tDnqDSNOqCkY7O3Jl7vnv3ALq9PqomsGwHwxBomoqmaf8lVd1k9krgm14f3bCwHQdFUbilqCiKiqoqqIoim2+Wcgkr/RKo6gLHqeN6De43TR7c8/Aad2g07+LdbmI5LqZl43pN6q6HadcRhkndayIMY3vDrtzQxKm7mKaJawtsy8AwLUzTkgFdCDRdRwgDIcSm1nQJLX0L2Ou/xbAcbNtG13U0XUi/qhKy0ZX3st76Extgq92hdnDI4dERlUqFarUi/SZVq1UOavvU9qs7fxL44eMn2p1XvO52abVatNvtHXU6nb/e5sXLFo8eP+PJ0+d0rvVJYBLHXPg+wfyC337CYJYRL0OWUcRkMiEv4Gw0YjweE81nfD2Z8PDdN95/nnH9SGCWZazXa6k0TaXKt3LQarUiSVLp8h6v8MMlX07nDKZLivxftpQEpknCdDolCEI5JYoifN/fmhyGIWm63hRFThLNiYIFWZ7vbhgGAcfH3zkb/6IoCs7Ppwx/DsnzXAbKbUejEYtFIEOr5ZKTk1N+DIbEcbzpyzKpP9JBM5VN77McAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="ctrlcv-issue"
-        title=""
-        src="/algorithm-storage/static/5801050c2cff596e9cd0db194e34aa6c/4ee7f/ctrlcv-issue.png"
-        srcset="/algorithm-storage/static/5801050c2cff596e9cd0db194e34aa6c/12f09/ctrlcv-issue.png 148w,
-/algorithm-storage/static/5801050c2cff596e9cd0db194e34aa6c/e4a3f/ctrlcv-issue.png 295w,
-/algorithm-storage/static/5801050c2cff596e9cd0db194e34aa6c/4ee7f/ctrlcv-issue.png 486w"
-        sizes="(max-width: 486px) 100vw, 486px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-  </a>
-    </span></p>
-<p>예제 테스트케이스가 전부 잘 작동하는 것을 확인하고 제출했는데 틀렸습니다를 받았다.</p>
-<p>어디가 잘못되었는지를 한참 분석했는데 정말 어이없게도 복사 붙여넣기 이슈였다.</p></div></div></li><li class="Styles__CardLayout-sc-mhtbf7-0 fbxmst"><div class="Styles__CardContentBox-sc-mhtbf7-1 ckigQX"><div class="Styles__UtterancesLayout-sc-e00mo-0 eKsDvq"></div></div></li></div></div></main><footer class="Styles__FooterLayout-sc-1mybmuc-0 dMMBTo"><div class="Styles__FooterContentsBox-sc-1mybmuc-1 jQGVab"><p class="Styles__FooterCopyRightParagraph-sc-1mybmuc-2 dSZLQT">© JeongHyeon Park. All rights reserved.<br/>Powered by Gatsby.</p></div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/baekjoon/4485.js";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+</code></deckgo-highlight-code></div></div></li><li class="Styles__CardLayout-sc-mhtbf7-0 fbxmst"><div class="Styles__CardContentBox-sc-mhtbf7-1 ckigQX"><div class="Styles__UtterancesLayout-sc-e00mo-0 eKsDvq"></div></div></li></div></div></main><footer class="Styles__FooterLayout-sc-1mybmuc-0 dMMBTo"><div class="Styles__FooterContentsBox-sc-1mybmuc-1 jQGVab"><p class="Styles__FooterCopyRightParagraph-sc-1mybmuc-2 dSZLQT">© JeongHyeon Park. All rights reserved.<br/>Powered by Gatsby.</p></div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/grbgen-config.json";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
