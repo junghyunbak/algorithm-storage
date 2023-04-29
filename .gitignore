@@ -12,3 +12,6 @@ templateBundle.js
 
 # 기타
 grbgen-config.json
+
+# grbgen build 폴더 제외
+!docs/**/*
