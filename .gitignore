@@ -3,12 +3,8 @@ package.json
 package-lock.json
 node_modules
 .vscode
-
-# 자주 생겨나는 임시 파일
-1.js
-index.js
-templateBundle.js
-*.text
+/1.js
+/index.js
 
 # 기타
 grbgen-config.json
