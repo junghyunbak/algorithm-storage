@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgit_repo_blog_generator=self.webpackChunkgit_repo_blog_generator||[]).push([[218],{4046:function(e,t,n){n.d(t,{Q:function(){return a}});var r=n(7294),o=n(5998),u=n(7513);const a=e=>{const t=(0,o.I0)();(0,r.useEffect)((()=>{t((0,u.r)(e))}),[])}},2513:function(e,t,n){n.r(t);var r=n(7294),o=n(4046);t.default=function(e){let{pageContext:{repoName:t}}=e;return(0,o.Q)(t),r.createElement("h1",null,"Page Not Found!")}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-2d959da175e37ea9c85e.js.map
