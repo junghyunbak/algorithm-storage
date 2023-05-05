@@ -31,20 +31,20 @@ function solution(targets) {
     }
   });
 
-  const stack = [];
+  const buffer = [];
 
   _targets.forEach(({ x, type, i }) => {
     switch (type) {
       case TYPE.S:
-        stack.push(i);
+        buffer.push(i);
         break;
       case TYPE.E:
         if (isDestroy[i]) {
           break;
         }
 
-        while (stack.length) {
-          const index = stack.pop();
+        while (buffer.length) {
+          const index = buffer.pop();
 
           isDestroy[index] = true;
         }
