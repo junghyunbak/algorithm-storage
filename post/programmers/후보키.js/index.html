@@ -70,24 +70,124 @@ data-styled.g17[id="Styles__UtterancesLayout-sc-e00mo-0"]{content:"cNlcFZ,"}/*!s
 data-styled.g18[id="Styles__PostLayout-sc-wk8yld-0"]{content:"iAuETZ,"}/*!sc*/
 .dGnEwQ{width:100%;}/*!sc*/
 data-styled.g19[id="Styles__PostFileContent-sc-wk8yld-1"]{content:"dGnEwQ,"}/*!sc*/
-</style><link rel="sitemap" type="application/xml" href="/algorithm-storage/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Styles__LayoutRootBox-sc-kjacjx-0 jYTVoq"><div class="Styles__HeaderLayout-sc-gozztf-2 iwjKoK"><div class="Styles__SidebarLayout-sc-13j39sg-0 hznFYt"><div class="sidebar-dimmed"></div><div class="sidebar-content"><p>메뉴</p><ul><li><a href="/algorithm-storage/about">About</a></li><li><a href="/algorithm-storage">Home</a></li></ul></div></div><div class="Styles__HeaderSideBox-sc-gozztf-1 iNtKGV"><div class="Styles__MenuButtonLayout-sc-1a4u3b3-0 bALupo"><div></div><div></div><div></div></div></div><a class="Styles__HeaderParagraph-sc-gozztf-0 doLWRw" href="/algorithm-storage"></a><div class="Styles__HeaderSideBox-sc-gozztf-1 iNtKGV"><div class="Styles__HeaderProfileBox-sc-gozztf-3 gBCMbd"><a href="/algorithm-storage/about"><img src="https://avatars.githubusercontent.com/u/44913775?v=4"/></a></div></div></div><main class="Styles__LayoutMain-sc-kjacjx-1 iCiqLs"><div class="Styles__LayoutMainContentsBox-sc-kjacjx-2 djPDNV"><div class="Styles__PostLayout-sc-wk8yld-0 iAuETZ"><li class="Styles__CardLayout-sc-mhtbf7-0 fbxmst"><div class="Styles__CardContentBox-sc-mhtbf7-1 ckigQX"><div class="Styles__PostFileContent-sc-wk8yld-1 dGnEwQ"><deckgo-highlight-code language="js" theme="dracula"><code slot="code">var lowerBound = (a, k) =&gt; {
-  let l = 0;
-  let r = a.length;
-  let m;
+.gikmFB{width:100%;padding:1rem;}/*!sc*/
+.gikmFB h1,.gikmFB h2{border-bottom:1px solid #eaeef2;padding:0.75rem 0;margin-bottom:0.75rem;}/*!sc*/
+.gikmFB h3{padding:0.5rem 0;}/*!sc*/
+.gikmFB deckgo-highlight-code,.gikmFB p{margin-bottom:1.5rem;}/*!sc*/
+.gikmFB ul,.gikmFB ol{margin-bottom:1.5rem;}/*!sc*/
+.gikmFB ul li,.gikmFB ol li{margin-bottom:0.5rem;}/*!sc*/
+.gikmFB h1 code,.gikmFB h2 code,.gikmFB h3 code,.gikmFB h4 code,.gikmFB h5 code,.gikmFB h6 code,.gikmFB p code,.gikmFB li code{border-radius:0.2rem;background-color:#F5F5F5;font-size:0.9rem;font-weight:bold;font-family:'GothicA1';padding:0.2rem 0.4rem;color:#EB5757;}/*!sc*/
+.gikmFB a{color:#0969da;}/*!sc*/
+.gikmFB blockquote{border-left:0.2rem solid #B2B2B2;background-color:#F5F5F5;padding-left:1rem;color:#666;}/*!sc*/
+.gikmFB table{margin-bottom:1.5rem;}/*!sc*/
+.gikmFB table th,.gikmFB table td{padding:0.5rem;}/*!sc*/
+.gikmFB table th{color:#5A5F8C;border-bottom:2px solid #5A5F8C;text-align:center;}/*!sc*/
+.gikmFB table td{border-bottom:1px solid #eaeef2;}/*!sc*/
+data-styled.g20[id="Styles__PostMarkdownContent-sc-wk8yld-2"]{content:"gikmFB,"}/*!sc*/
+</style><link rel="sitemap" type="application/xml" href="/algorithm-storage/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Styles__LayoutRootBox-sc-kjacjx-0 jYTVoq"><div class="Styles__HeaderLayout-sc-gozztf-2 iwjKoK"><div class="Styles__SidebarLayout-sc-13j39sg-0 hznFYt"><div class="sidebar-dimmed"></div><div class="sidebar-content"><p>메뉴</p><ul><li><a href="/algorithm-storage/about">About</a></li><li><a href="/algorithm-storage">Home</a></li></ul></div></div><div class="Styles__HeaderSideBox-sc-gozztf-1 iNtKGV"><div class="Styles__MenuButtonLayout-sc-1a4u3b3-0 bALupo"><div></div><div></div><div></div></div></div><a class="Styles__HeaderParagraph-sc-gozztf-0 doLWRw" href="/algorithm-storage"></a><div class="Styles__HeaderSideBox-sc-gozztf-1 iNtKGV"><div class="Styles__HeaderProfileBox-sc-gozztf-3 gBCMbd"><a href="/algorithm-storage/about"><img src="https://avatars.githubusercontent.com/u/44913775?v=4"/></a></div></div></div><main class="Styles__LayoutMain-sc-kjacjx-1 iCiqLs"><div class="Styles__LayoutMainContentsBox-sc-kjacjx-2 djPDNV"><div class="Styles__PostLayout-sc-wk8yld-0 iAuETZ"><li class="Styles__CardLayout-sc-mhtbf7-0 fbxmst"><div class="Styles__CardContentBox-sc-mhtbf7-1 ckigQX"><div class="Styles__PostFileContent-sc-wk8yld-1 dGnEwQ"><deckgo-highlight-code language="js" theme="dracula"><code slot="code">function solution(relation) {
+  var answer = 0;
 
-  while (l &lt; r) {
-    m = Math.floor((l + r) / 2);
+  const colSize = relation[0].length;
+  const rowSize = relation.length;
 
-    if (a[m] &lt; k) {
-      l = m + 1;
-    } else {
-      r = m;
+  // 유일성 확인 함수
+  const chkUnique = (indexes) =&gt; {
+    const keys = relation.map((tuple) =&gt;
+      indexes.map((i) =&gt; tuple[i]).join(&#x27;|&#x27;)
+    );
+
+    return new Set(keys).size === rowSize;
+  };
+
+  // 최소성 확인 함수
+  const chkMinimal = (indexes) =&gt; {
+    for (let i = 0; i &lt; indexes.length; i++) {
+      const newIndexes = [...indexes];
+
+      newIndexes.splice(i, 1);
+
+      if (chkUnique(newIndexes)) {
+        return false;
+      }
     }
-  }
 
-  return r;
-};
-</code></deckgo-highlight-code></div></div></li><li class="Styles__CardLayout-sc-mhtbf7-0 fbxmst"><div class="Styles__CardContentBox-sc-mhtbf7-1 ckigQX"><div class="Styles__UtterancesLayout-sc-e00mo-0 cNlcFZ"></div></div></li></div></div></main><footer class="Styles__FooterLayout-sc-1mybmuc-0 dMMBTo"><div class="Styles__FooterContentsBox-sc-1mybmuc-1 jQGVab"><p class="Styles__FooterCopyRightParagraph-sc-1mybmuc-2 dSZLQT">© JeongHyeon Park. All rights reserved.<br/>Powered by Gatsby.</p></div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/algorithm/lower-bound.js";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+    return true;
+  };
+
+  const solve = (comb, index) =&gt; {
+    let isUnique = chkUnique(comb);
+
+    if (isUnique) {
+      let isMinimal = chkMinimal(comb);
+
+      if (isMinimal) {
+        answer++;
+      }
+    } else {
+      for (let i = index + 1; i &lt; colSize; i++) {
+        comb.push(i);
+        solve(comb, i);
+        comb.pop();
+      }
+    }
+  };
+
+  solve([], -1);
+
+  return answer;
+}
+</code></deckgo-highlight-code></div></div></li><li class="Styles__CardLayout-sc-mhtbf7-0 fbxmst"><div class="Styles__CardContentBox-sc-mhtbf7-1 ckigQX"><div class="Styles__PostMarkdownContent-sc-wk8yld-2 gikmFB"><h2>틀렸던 이유</h2>
+<p>모든 속성의 조합을 구할 때, <u>현재 조합이 유일성을 만족할 경우, 현재 조합에서 파생되는 새로운 조합은 최소성을 만족시키지 않는다</u>고 생각했기 때문에 최소성 만족 여부는 검사해주지 않았다.</p>
+<p>맞는 말이긴 하나, 유일성을 만족시키지 못하는 조합이 새로운 속성과 함께 사용되어 유일성을 만족시키게 되었을 때, 해당 조합이 항상 최소성을 보장하지는 않는다.</p>
+<p>예를 들면,</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>a</td>
+<td>1</td>
+</tr>
+<tr>
+<td>a</td>
+<td>a</td>
+<td>2</td>
+</tr>
+<tr>
+<td>b</td>
+<td>c</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>위 예제에서 후보키는 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{0,2\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mclose">}</span></span></span></span></span>, <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{1,2\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mclose">}</span></span></span></span></span> 두 개이다.</p>
+<ol>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{0\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mclose">}</span></span></span></span></span> ❌</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{0,1\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">}</span></span></span></span></span> ❌</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{0,1,2\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mclose">}</span></span></span></span></span> ⭕(❌)</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{0,2\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mclose">}</span></span></span></span></span> ⭕</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>1</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{1\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">1</span><span class="mclose">}</span></span></span></span></span> ❌</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{1,2\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mclose">}</span></span></span></span></span> ⭕</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{2\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">2</span><span class="mclose">}</span></span></span></span></span> ❌</li>
+</ol>
+<p>하지만 내 알고리즘은 <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{0,1,2\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mclose">}</span></span></span></span></span> 도 후보키로 처리하고 있었다.</p>
+<p>2에서 3으로 넘어가면서 유일성을 만족하게 되었으나 최소성을 만족시키지 못해서 후보키가 될 수 없지만, 최소성 만족 여부를 검사하지 않으니 후보키 중 하나로 처리했던 것이다.</p>
+<h2>풀이 방법</h2>
+<ol>
+<li>모든 조합을 구하는 재귀 알고리즘</li>
+<li>유일성 체크 알고리즘</li>
+<li>최소성 체크 알고리즘</li>
+</ol>
+<p>세 가지만 확실하게 구현하면 된다.</p>
+<p>내가 작성한 최소성 체크 알고리즘은 속성을 하나씩 지워보며 유일성을 만족하는지를 확인한다.</p>
+<p>무척 직관적으로 구현했기 때문에 알아보기엔 쉽지만 효율이 매우 나빠 보인다.</p>
+<p>로우, 컬럼 수가 늘어나면 사용할 수 없을 것 같다.</p></div></div></li><li class="Styles__CardLayout-sc-mhtbf7-0 fbxmst"><div class="Styles__CardContentBox-sc-mhtbf7-1 ckigQX"><div class="Styles__UtterancesLayout-sc-e00mo-0 cNlcFZ"></div></div></li></div></div></main><footer class="Styles__FooterLayout-sc-1mybmuc-0 dMMBTo"><div class="Styles__FooterContentsBox-sc-1mybmuc-1 jQGVab"><p class="Styles__FooterCopyRightParagraph-sc-1mybmuc-2 dSZLQT">© JeongHyeon Park. All rights reserved.<br/>Powered by Gatsby.</p></div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/programmers/후보키.js";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
