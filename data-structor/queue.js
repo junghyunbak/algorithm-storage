@@ -42,7 +42,7 @@ class Queue {
   }
 
   empty() {
-    return this.head === null ? 1 : 0;
+    return this._front === null ? 1 : 0;
   }
 
   front() {
