@@ -24,7 +24,8 @@ var P = console.log;
 
 /*
 function main() {
+  const answer = [];
   let tc = parseInt(input());
   while (tc--) {}
-};
+}
 */
