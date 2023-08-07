@@ -3,7 +3,7 @@ var DisjointSet = class DisjointSet {
     this.parent = Array(n)
       .fill(null)
       .map((value, index) => index);
-    this.rank = Array(n + 1).fill(1);
+    this.rank = Array(n).fill(1);
   }
 
   find(u) {
